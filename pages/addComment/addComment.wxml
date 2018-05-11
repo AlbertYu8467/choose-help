@@ -1,0 +1,34 @@
+<!--pages/addComment/addComment.wxml-->
+<view class='container' style='padding:0'>
+  <view class='add-control' wx:if="{{isCompareShow}}">
+    <view class='row'>
+      <input type='text' placeholder="input compare title" placeholder-style="color:#9491EC"></input>
+    </view>
+    <view class='row add' >
+      <button class='add-button'>add</button>
+      <button class='complete'>complete</button>
+    </view>
+    
+  </view>
+  <view class='add-item' wx:if="{{isItemShow}}">
+
+  </view>
+  <view class='row'>
+    <view class='col'><view class='th'>I/T</view></view>
+    <view class='col' wx:for="{{itemMsg.companys}}">
+      <view class='th'>{{item.company}}</view>
+    </view>
+    <view class='col'><view class='th'>I/S</view></view>
+  </view>
+  <view class='row'>
+    <view class='col'>
+      <view class='td' wx:for="{{itemMsg.items}}">{{item}}</view>
+    </view>
+    <view class='col' wx:for="{{itemMsg.companys}}">
+      <view class='td' wx:for="{{item.scores}}">{{item}}</view>
+    </view>
+    <view class='col'>
+      <view class='td' wx:for="{{itemMsg.itemScores}}">{{item}}</view>
+    </view>
+  </view>
+</view>

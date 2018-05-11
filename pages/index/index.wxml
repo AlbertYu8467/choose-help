@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+  <!--<view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
@@ -9,5 +9,31 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+  </view>-->
+  <view class='title'>Introduce</view>
+  <view class='introduce'>Welcome to my mini-app. This is a program that want to  help people who make choose difficultly.It will give you some effective and scientific references.Let's join it. </view>
+  <view class='title'>Flow Chart</view>
+  <view class='process'>
+    <view class='step'>
+      <text>step1:</text>
+      <text>add item title (I/T)</text>
+    </view>
+    <view class='step'>
+      <text>step2:</text>
+      <text>add item & item score (I/S)</text>
+    </view>
+    <view class='step'>
+      <text>step3:</text>
+      <text>comment score for every item</text>
+    </view>
+    <view class='step'>
+      <text>step4:</text>
+      <text>choose comment algorithm</text>
+    </view>
+    <view class='step'>
+      <text>step5:</text>
+      <text>submit your comment</text>
+    </view>
   </view>
+  <button class='start' hover-class=''>let's go</button>
 </view>

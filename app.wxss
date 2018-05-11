@@ -1,10 +1,11 @@
 /**app.wxss**/
 .container {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+  padding:80rpx 0;
   box-sizing: border-box;
-} 
+  font-family: "Arial","Microsoft YaHei";
+  font-size:30rpx;
+}
+page{  
+  background-image: linear-gradient(142deg, #5EFCE8 0%, #7772EF 100%)  
+}  
