@@ -1,17 +1,30 @@
 <!--pages/addComment/addComment.wxml-->
 <view class='container' style='padding:0'>
   <view class='add-control' wx:if="{{isCompareShow}}">
-    <view class='row'>
-      <input type='text' placeholder="input compare title" placeholder-style="color:#9491EC"></input>
+    <view class='row' wx:for="{{itemMsg.companys}}">
+      <input type='text' value='{{item.company}}' name='{{item.company}}' bindblur='blurInput' data-index="{{index}}"></input>
     </view>
     <view class='row add' >
-      <button class='add-button'>add</button>
-      <button class='complete'>complete</button>
+      <button class='add-button' bindtap='addInput'>add</button>
+      <button class='complete' bindtap='switchCompare'>complete</button>
     </view>
-    
   </view>
   <view class='add-item' wx:if="{{isItemShow}}">
-
+    <form bindsubmit='formSubmit'>
+      <view class='row'>
+        <label>I</label>
+        <input type='text' value='item' name='item' ></input>
+      </view>
+      <view class='row'>
+        <label>S</label>
+        <input type='number' value='10' name='score' bindinput ="scoreInput"></input>
+      </view>
+      <view class='row' wx:for="{{itemMsg.companys}}">
+        <label>{{item.company}}</label>
+        <input type='number' value='2' name="{{'item'+index}}" bindblur='checkInput'></input>
+      </view>
+      <view class='row'><button class='item-add' formType="submit">add</button></view>
+    </form>
   </view>
   <view class='row'>
     <view class='col'><view class='th'>I/T</view></view>
@@ -30,5 +43,8 @@
     <view class='col'>
       <view class='td' wx:for="{{itemMsg.itemScores}}">{{item}}</view>
     </view>
+  </view>
+  <view class='row' wx:if="{{isItemShow}}">
+    <button class='result' bindtap='calc'>result</button>
   </view>
 </view>

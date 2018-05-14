@@ -35,5 +35,5 @@
       <text>submit your comment</text>
     </view>
   </view>
-  <button class='start' hover-class=''>let's go</button>
+  <button class='start' hover-class='' bindtap='go'>let's go</button>
 </view>

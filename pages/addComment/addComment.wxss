@@ -14,13 +14,16 @@
 .th {
   padding: 5px 0;
 }
-.add-control{
+.add-control,
+.add-item{
   padding: 10rpx 0;
   margin:5rpx 10rpx;
   border: 1px solid #9491EC;
 }
-.add-control .row {
+.add-control .row,
+.add-item .row {
   justify-content: center;
+  margin: 8rpx 0;
 }
 input {
   background: #fff;
@@ -40,4 +43,27 @@ input {
   background: #9491EC;
   color: #fff; 
   margin: 0 20rpx;
+}
+.item-add {
+  height: 60rpx;
+  font-size:35rpx;
+  line-height: 60rpx;
+  background: #9491EC;
+  color: #fff; 
+  margin: 0 20rpx;
+}
+label {
+  display: inline-block;
+  height: 60rpx;
+  padding: 5rpx 20rpx;
+  color: #9491EC; 
+  line-height: 60rpx;
+}
+.result{
+  width: 300rpx;
+  height: 60rpx;
+  font-size:35rpx;
+  line-height: 60rpx;
+  background: #9491EC;
+  color: #fff; 
 }

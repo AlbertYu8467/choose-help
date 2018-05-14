@@ -47,5 +47,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  go:function(){
+    wx.redirectTo({
+      url:'../addComment/addComment'
+    })
+    console.log(111)
   }
 })
